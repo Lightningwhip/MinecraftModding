@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minecraft Modding Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+        .dropdown-content a:hover {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://modrinth.com" target="_blank">
+        <img src="https://pbs.twimg.com/profile_images/1832297346077437952/QVGJgzIn_400x400.jpg" alt="Minecraft Header" class="header-image">
+    </a>
+    <div class="dropdown">
+        <h2>Modrinth Minecraft Mods ▼</h2>
+        <div class="dropdown-content">
+            <a href="https://modrinth.com/mod/fabric-api" target="_blank">Fabric API</a>
+            <a href="https://modrinth.com/mod/sodium" target="_blank">Sodium</a>
+            <a href="https://modrinth.com/mod/iris" target="_blank">Iris</a>
+            <a href="https://modrinth.com/mod/entityculling" target="_blank">Entity Culling</a>
+            <a href="https://modrinth.com/mod/appleskin" target="_blank">AppleSkin</a>
+            <a href="https://modrinth.com/mod/zoomify" target="_blank">Zoomify</a>
+            <a href="https://modrinth.com/mod/sodium-extra" target="_blank">Sodium Extra</a>
+            <a href="https://modrinth.com/mod/modmenu" target="_blank">Mod Menu</a>
+            <a href="https://modrinth.com/mod/lithium" target="_blank">Lithium</a>
+            <a href="https://modrinth.com/mod/starlight" target="_blank">Starlight</a>
+            <a href="https://modrinth.com/mod/lambdynamiclights" target="_blank">LambDynamicLights</a>
+            <a href="https://modrinth.com/mod/replaymod" target="_blank">ReplayMod</a>
+            <a href="https://modrinth.com/mod/jei" target="_blank">JEI</a>
+            <a href="https://modrinth.com/mod/betterf3" target="_blank">BetterF3</a>
+            <a href="https://modrinth.com/mod/presence-footsteps" target="_blank">Presence Footsteps</a>
+            <style>
+
+                .dropdown-content {
+                    transform-origin: top;
+                    transform: scaleY(0);
+                    transition: transform 0.3s ease-out;
+                    display: block;
+                    opacity: 0;
+
+                }
+                
+                .dropdown:hover .dropdown-content {
+                    transform: scaleY(1);
+                    opacity: 1;
+                }
+            </style>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        background-color: rgb(16, 177, 129);
+    }
+</style>
+<style>
+    .header-image {
+        border: 3px solid rgba(0, 0, 0, 0.8);
+        border-radius: 25px;
+    }
+</style>
+<style>
+    .dropdown h2 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+</style>
+<style>
+    .dropdown-content {
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform 0.3s ease-out;
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .dropdown.active .dropdown-content {
+        transform: scaleY(1);
+        opacity: 1;
+        pointer-events: auto;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            const title = dropdown.querySelector('h2');
+            
+            title.addEventListener('click', () => {
+                dropdown.classList.toggle('active');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+
+<style>
+    .random-button {
+        background-color: red;
+        border: none;
+        color: black;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 10px;
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .button-container {
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+<script>
+    function goToRandomMod() {
+        const links = [
+            'https://modrinth.com/mod/fabric-api',
+            'https://modrinth.com/mod/sodium',
+            'https://modrinth.com/mod/iris',
+            'https://modrinth.com/mod/entityculling',
+            'https://modrinth.com/mod/appleskin',
+            'https://modrinth.com/mod/zoomify',
+            'https://modrinth.com/mod/sodium-extra',
+            'https://modrinth.com/mod/modmenu',
+            'https://modrinth.com/mod/lithium',
+            'https://modrinth.com/mod/starlight',
+            'https://modrinth.com/mod/lambdynamiclights',
+            'https://modrinth.com/mod/replaymod',
+            'https://modrinth.com/mod/jei',
+            'https://modrinth.com/mod/betterf3',
+            'https://modrinth.com/mod/presence-footsteps'
+        ];
+        const randomLink = links[Math.floor(Math.random() * links.length)];
+        window.location.href = randomLink;
+
+
+    }
+
+    // Wrap the title and button in a container
+    window.onload = function() {
+        const dropdown = document.querySelector('.dropdown');
+        const h2 = dropdown.querySelector('h2');
+        
+        // Create container
+        const container = document.createElement('div');
+        container.className = 'button-container';
+        
+        // Move h2 into container
+        h2.parentNode.insertBefore(container, h2);
+        container.appendChild(h2);
+        
+        // Add button
+        const button = document.createElement('button');
+        button.className = 'random-button';
+        button.textContent = 'Random';
+        button.onclick = goToRandomMod;
+        container.appendChild(button);
+    }
+</script>
+<style>
+    .random-button {
+        margin-left: 100px; /* Increased from 10px */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added drop shadow */
+    }
+</style>
+<style>
+    .random-button {
+        margin-left: 100px;
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+    }
+</style>
+<script>
+    function goToRandomModWithCounter() {
+        const countDisplay = document.createElement('div');
+        countDisplay.style.position = 'fixed';
+        countDisplay.style.top = '50%';
+        countDisplay.style.left = '50%';
+        countDisplay.style.transform = 'translate(-50%, -50%)';
+        countDisplay.style.fontSize = '48px';
+        countDisplay.style.fontWeight = 'bold';
+        countDisplay.style.zIndex = '1000';
+        document.body.appendChild(countDisplay);
+
+        let count = 3;
+        countDisplay.textContent = count;
+
+        const countdown = setInterval(() => {
+            count--;
+            countDisplay.textContent = count;
+            
+            if (count <= 0) {
+                clearInterval(countdown);
+                document.body.removeChild(countDisplay);
+                goToRandomMod();
+            }
+        }, 1000);
+    }
+
+    // Update the button onclick handler
+    window.onload = function() {
+        const dropdown = document.querySelector('.dropdown');
+        const h2 = dropdown.querySelector('h2');
+        
+        const container = document.createElement('div');
+        container.className = 'button-container';
+        
+        h2.parentNode.insertBefore(container, h2);
+        container.appendChild(h2);
+        
+        const button = document.createElement('button');
+        button.className = 'random-button';
+        button.textContent = 'Random';
+        button.onclick = goToRandomModWithCounter; // Changed this line
+        container.appendChild(button);
+    }
+</script>
+
+<style>
+    .corner-text {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-family: "Comic Sans MS", cursive;
+        font-weight: bold;
+        font-size: 24px;
+        z-index: 1000;
+    
+
+    }
+</style>
+<div class="corner-text">Mods And More</div>
+<style>
+    .mod-of-day {
+        position: fixed;
+        top: 60px;
+        left: 20px;
+        font-family: "Comic Sans MS", cursive;
+        font-weight: bold;
+        font-size: 20px;
+        z-index: 1000;
+    }
+</style>
+
+<div class="mod-of-day">Mod Of The Day: <span id="daily-mod"></span></div>
+
+<script>
+    function updateModOfDay() {
+        const dropdown = document.querySelector('.dropdown');
+        const links = dropdown.querySelectorAll('a[href*="modrinth.com"]');
+        
+        if (links.length > 0) {
+            // Get current date as string for storage key
+            const today = new Date().toDateString();
+            
+            // Check if we already have a mod stored for today
+            let modOfDay = localStorage.getItem('modOfDay');
+            let lastUpdate = localStorage.getItem('lastModUpdate');
+            
+            if (!modOfDay || lastUpdate !== today) {
+                // Pick a random mod
+                const randomIndex = Math.floor(Math.random() * links.length);
+                modOfDay = links[randomIndex].textContent;
+                
+                // Store in localStorage
+                localStorage.setItem('modOfDay', modOfDay);
+                localStorage.setItem('lastModUpdate', today);
+            }
+            
+            // Display the mod
+            document.getElementById('daily-mod').textContent = modOfDay;
+        }
+    }
+
+    // Run when page loads
+    window.addEventListener('load', updateModOfDay);
+</script>
+<style>
+    .video-container {
+        position: relative;
+        width: 560px;
+        margin: 20px auto;
+        border: 3px solid black;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 310px;
+        border: none;
+    }
+</style>
+
+<div class="video-container">
+    <iframe 
+        src="https://www.youtube.com/embed/Ke-QqK3NQv4" 
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+
+    </iframe>
+</div>
+<style>
+    .video-container {
+        margin-top: 180px;
+    }
+</style>
+<style>
+    .credits {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 5px;
+    }
+</style>
+
+<div class="credits">Credit: Troublechute</div>
+<style>
+    .tutorial-title {
+        font-family: "Comic Sans MS", cursive;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="tutorial-title">How to get fabric and install mods</div>
+<style>
+    .discord-link {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 20px;
+        text-align: right;
+        margin-top: 20px;
+        margin-right: 180px;
+    }
+    
+    .discord-link a {
+        color: #000000;
+        text-decoration: none;
+    }
+    
+    .discord-link a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="discord-link">
+    <a href="https://discord.gg/v6v4pMv">Join The Fabric Modding Discord!</a>
+</div>
+<style>
+    /* Mobile devices (phones) */
+    @media screen and (max-width: 480px) {
+        body {
+            max-width: 100%;
+            padding: 10px;
+        }
+        
+        .header-image {
+            max-height: 200px;
+        }
+        
+        .dropdown h2 {
+            font-size: 20px;
+        }
+        
+        .dropdown-content {
+            min-width: 140px;
+        }
+        
+        .tutorial-title {
+            font-size: 20px;
+        }
+        
+        .credits, .discord-link {
+            font-size: 16px;
+        }
+        
+        .video-container {
+            margin-top: 100px;
+        }
+    }
+
+    /* Tablets */
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        body {
+            max-width: 90%;
+            padding: 15px;
+        }
+        
+        .header-image {
+            max-height: 300px;
+        }
+        
+        .dropdown h2 {
+            font-size: 22px;
+        }
+    }
+
+    /* Laptops and larger screens */
+    @media screen and (min-width: 769px) {
+        body {
+            max-width: 800px;
+            padding: 20px;
+        }
+        
+        .header-image {
+            max-height: 400px;
+        }
+    }
+</style>
+<script>
+    const videos = [
+        'https://www.youtube.com/embed/pviCI3gIZkU',
+        'https://www.youtube.com/embed/iimhmTiz9fk',
+        'https://www.youtube.com/embed/cl5y4HcvMU0', 
+        'https://www.youtube.com/embed/bd83XKp65jw',
+        'https://www.youtube.com/embed/-dyoaxS6zbQ'
+    ];
+    
+    let currentVideoIndex = 0;
+    
+    function createVideoElement(index) {
+        const iframe = document.createElement('iframe');
+        iframe.width = '100%';
+        iframe.height = '400';
+        iframe.src = videos[index];
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        return iframe;
+    }
+
+    function rotateVideos() {
+        const videoSection = document.querySelector('.video-section');
+        videoSection.innerHTML = ''; // Clear current videos
+        
+        // Add all videos
+        videos.forEach((_, index) => {
+            const videoElement = createVideoElement((currentVideoIndex + index) % videos.length);
+            videoElement.style.display = index === 0 ? 'block' : 'none';
+            videoSection.appendChild(videoElement);
+        });
+
+        // Show next video and hide current
+        const allVideos = videoSection.children;
+        allVideos[0].style.display = 'none';
+        allVideos[1].style.display = 'block';
+        
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+    }
+
+    // Initial setup
+    window.onload = function() {
+        const videoSection = document.querySelector('.video-section');
+        videoSection.appendChild(createVideoElement(0));
+    }
+
+    // Rotate videos every 5 seconds
+    setInterval(rotateVideos, 10000);
+</script>
+
+
+<div class="video-section">
+</div>
+
+<style>
+    .video-section {
+        margin: 20px 0;
+        position: relative;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    
+    .video-section iframe {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+</style>
+<style>
+    .video-section {
+        margin: 100px 0;  
+    }
+</style>
